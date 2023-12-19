@@ -1,8 +1,28 @@
-<div class="">
-    <div>
+<nav class="flex justify-between shadow px-4 py-2">
+    <div class="flex items-center">
         Hi, User
     </div>
-    <div>
-        Add +
+    <div class="border border-slate-600 p-1">
+        <button>Add +</button>
     </div>
+</nav>
+<div class="px-4 pt-4">
+    <table class="border border-collapse border-slate-600">
+        <tr class="border border-collapse border-slate-600">
+            <th class="border border-collapse border-slate-600 px-10 table-auto"></th>
+            <th class="border border-collapse border-slate-600 px-10 table-auto">Nama</th>
+            <th class="border border-collapse border-slate-600 px-10 table-auto">Negara</th>
+            <th class="border border-collapse border-slate-600 px-10 table-auto">Kota</th>
+            <th class="border border-collapse border-slate-600 px-10 table-auto">Balance</th>
+        </tr>
+        <tr class="border border-collapse border-slate-600" *ngFor="let person of persons">
+            <td class="border border-collapse border-slate-600 mx-10">
+                <img src="{{ person.avatar }}" alt="">
+            </td>
+            <td class="border border-collapse border-slate-600 mx-10">{{ person.name }}</td>
+            <td class="border border-collapse border-slate-600 mx-10">{{ person.country }}</td>
+            <td class="border border-collapse border-slate-600 mx-10">{{ person.city }}</td>
+            <td class="border border-collapse border-slate-600 mx-10">{{ person.balance | currency }}</td>
+        </tr>
+    </table>
 </div>
