@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Person } from './models/person.model';
-import { PersonService } from './services/person.service';
+import { Person } from '../models/person.model';
+import { PersonService } from '../services/person.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  selector: 'app-landing-page',
+  templateUrl: './landing-page.component.html',
+  styleUrl: './landing-page.component.scss'
 })
-export class AppComponent {
-  title = 'angular-case';
-
+export class LandingPageComponent implements OnInit{
   persons: Person[] = []
 
   constructor(

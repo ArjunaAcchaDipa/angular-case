@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PersonComponent } from './person/person.component';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  {path:'', component: PersonComponent}
+  { path: "", component: LandingPageComponent }
 ];
 
 @NgModule({
-  declarations:[],
+  declarations: [],
+
   imports: [
     CommonModule,
     RouterModule.forRoot(routes)
